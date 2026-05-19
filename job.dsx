@@ -1,0 +1,640 @@
+BEGIN HEADER
+   CharacterSet "CP1252"
+   ExportingTool "IBM InfoSphere DataStage Export"
+   ToolVersion "8"
+   ServerName "RN000171874"
+   ToolInstanceID "CMS01_DEV"
+   MDISVersion "1.0"
+   Date "2026-03-31"
+   Time "12.26.00"
+   ServerVersion "11.7"
+END HEADER
+BEGIN DSJOB
+   Identifier "lodcpyCapManAdjTempToJobParamM"
+   DateModified "2025-07-24"
+   TimeModified "19.06.52"
+   BEGIN DSRECORD
+      Identifier "ROOT"
+      OLEType "CJobDefn"
+      Readonly "0"
+      Name "lodcpyCapManAdjTempToJobParamM"
+      NextID "1"
+      Container "V0"
+      FullDescription =+=+=+=
+* VC LOGS *
+^1_1 10/27/2005 14:03:05 210349 PROMOTE dsprod CMS dsadm Cap move from DSDEV CMS_CAP_STAGE to DSPROD CMS of Jobs/Capitation/Manual Adjustments and Routines/CMS/CapManulAdj per CM1333469 and NORA 9273 per John Lew.
+^1_1 10/27/2005 13:47:43 210348 INIT dsdev CMS_CAP_STAGE dsadm Cap move from DSDEV CMS_CAP_STAGE to DSPROD CMS of Jobs/Capitation/Manual Adjustments and Routines/CMS/CapManulAdj per CM1333469 and NORA 9273 per John Lew.
+^1_2 01/09/2010 13:49:39 cms migration etlp8005 cms1 rselvar Included the changes for CMS Migration project.
+
+=+=+=+=
+      JobVersion "56.1.1"
+      ControlAfterSubr "0"
+      Parameters "CParameters"
+      BEGIN DSSUBRECORD
+         Name "jobParamFile"
+         Prompt "jobParamFile"
+         Default "/etldata/cms01/common/ctl/JParamCMA33SH.txt"
+         ParamType "0"
+         ParamLength "0"
+         ParamScale "0"
+      END DSSUBRECORD
+      BEGIN DSSUBRECORD
+         Name "CNum"
+         Prompt "CNum"
+         Default "33"
+         ParamType "0"
+         ParamLength "0"
+         ParamScale "0"
+      END DSSUBRECORD
+      BEGIN DSSUBRECORD
+         Name "Par1"
+         Prompt "Bus Type"
+         Default "SH"
+         ParamType "0"
+         ParamLength "0"
+         ParamScale "0"
+      END DSSUBRECORD
+      BEGIN DSSUBRECORD
+         Name "tmpDir"
+         Prompt "tmpDir"
+         Default "/etldata/cms01/isdata/istmp"
+         ParamType "0"
+         ParamLength "0"
+         ParamScale "0"
+      END DSSUBRECORD
+      NULLIndicatorPosition "0"
+      IsTemplate "0"
+      NLSLocale ",,,,"
+      JobType "0"
+      Category "\\Jobs\\Capitation\\ManualAdjustments"
+      CenturyBreakYear "30"
+      NextAliasID "2"
+      ParameterFileDDName "DD00001"
+      ReservedWordCheck "1"
+      TransactionSize "0"
+      ValidationStatus "0"
+      Uploadable "0"
+      PgmCustomizationFlag "0"
+      JobReportFlag "0"
+      AllowMultipleInvocations "1"
+      Act2ActOverideDefaults "0"
+      Act2ActEnableRowBuffer "0"
+      Act2ActUseIPC "0"
+      Act2ActBufferSize "0"
+      Act2ActIPCTimeout "0"
+      ExpressionSemanticCheckFlag "0"
+      TraceOption "0"
+      EnableCacheSharing "0"
+      RuntimeColumnPropagation "0"
+      RelStagesInJobStatus "-1"
+      WebServiceEnabled "0"
+      MFProcessMetaData "0"
+      MFProcessMetaDataXMLFileExchangeMethod "0"
+      IMSProgType "0"
+      CopyLibPrefix "ARDT"
+      RecordPerformanceResults "0"
+   END DSRECORD
+   BEGIN DSRECORD
+      Identifier "V0"
+      OLEType "CContainerView"
+      Readonly "0"
+      Name "Job"
+      NextID "1"
+      IsTopLevel "0"
+      StageList "V0S39|V0S45|V0S46|V0A48"
+      StageXPos "384|96|240|91"
+      StageYPos "96|96|96|211"
+      StageTypes "CSeqFileStage|CSeqFileStage|CTransformerStage|ID_PALETTEANNOTATION"
+      NextStageID "49"
+      SnapToGrid "1"
+      GridLines "0"
+      ZoomValue "100"
+      StageXSize "48|48|48|355"
+      StageYSize "48|48|48|55"
+      ContainerViewSizing "0000 0000 0602 0453 0000 0001 0000 0000"
+      StageNames "sffJobParamFile|sffTempFile|t1xfmMapping| "
+      StageTypeIDs "CSeqFileStage|CSeqFileStage|CTransformerStage| "
+      LinkNames " |inTempFile|outJobParam| "
+      LinkHasMetaDatas " |True|True| "
+      LinkTypes " |1|1| "
+      LinkNamePositionXs " |170|307| "
+      LinkNamePositionYs " |120|120| "
+      TargetStageIDs " |V0S46|V0S39| "
+      SourceStageEffectiveExecutionModes " |0|0| "
+      SourceStageRuntimeExecutionModes " |0|0| "
+      TargetStageEffectiveExecutionModes " |0|0| "
+      TargetStageRuntimeExecutionModes " |0|0| "
+      LinkIsSingleOperatorLookup " |False|False| "
+      LinkIsSortSequential " |False|False| "
+      LinkSortMode " |0|0| "
+      LinkPartColMode " |0|0| "
+      LinkSourcePinIDs " |V0S45P1|V0S46P2| "
+   END DSRECORD
+   BEGIN DSRECORD
+      Identifier "V0A48"
+      OLEType "CAnnotation"
+      Readonly "0"
+      Name "V0A48"
+      NextID "0"
+      AnnotationType "0"
+      AnnotationText =+=+=+=
+Modification History
+Date                 Project #                Who                  Description
+06/16/05          CP6005                  Thanh Vu         Initial design.
+=+=+=+=
+      TextFont "MS Sans Serif\\10\\0\\0\\0\\400\\0"
+      TextHorizontalJustification "0"
+      TextVerticalJustification "1"
+      TextColor "0"
+      BackgroundColor "13160660"
+      BackgroundTransparent "0"
+      BorderVisible "1"
+   END DSRECORD
+   BEGIN DSRECORD
+      Identifier "V0S39"
+      OLEType "CSeqFileStage"
+      Readonly "0"
+      Name "sffJobParamFile"
+      NextID "2"
+      InputPins "V0S39P1"
+      UnixFormat "1"
+      PipeStage "0"
+      UnicodeBOM "1"
+      UnicodeSwapped "1"
+      AllowColumnMapping "0"
+      WithFilter "0"
+      StageType "CSeqFileStage"
+   END DSRECORD
+   BEGIN DSRECORD
+      Identifier "V0S39P1"
+      OLEType "CSeqInput"
+      Readonly "0"
+      Name "outJobParam"
+      Partner "V0S46|V0S46P2"
+      FileName "#jobParamFile#"
+      Delimiter ","
+      QuoteChar "\""
+      ColHeaders "0"
+      OmitNewLine "0"
+      Append "0"
+      Backup "0"
+      FixedWidth "0"
+      ColSpace "0"
+      EnforceMetaData "0"
+      Writetime "0"
+      WaitforReader "0"
+      Flushrow "0"
+      PadChar "#"
+   END DSRECORD
+   BEGIN DSRECORD
+      Identifier "V0S45"
+      OLEType "CSeqFileStage"
+      Readonly "0"
+      Name "sffTempFile"
+      NextID "2"
+      OutputPins "V0S45P1"
+      UnixFormat "1"
+      PipeStage "0"
+      UnicodeBOM "1"
+      UnicodeSwapped "1"
+      AllowColumnMapping "0"
+      WithFilter "0"
+      StageType "CSeqFileStage"
+   END DSRECORD
+   BEGIN DSRECORD
+      Identifier "V0S45P1"
+      OLEType "CSeqOutput"
+      Readonly "0"
+      Name "inTempFile"
+      Partner "V0S46|V0S46P1"
+      FileName "#tmpDir#/cap_manual_adj_job_param_temp_#CNum##Par1#.txt"
+      ColDelim ","
+      QuoteChar "\""
+      ColHeaders "0"
+      FixedWidth "1"
+      ColSpace "0"
+      EnforceMetaData "0"
+      Readtimeout "0"
+      Columns "COutputColumn"
+      BEGIN DSSUBRECORD
+         Name "TEXT"
+         SqlType "12"
+         Precision "2048"
+         Scale "0"
+         Nullable "0"
+         KeyPosition "0"
+         DisplaySize "2048"
+         Group "0"
+         SortKey "0"
+         SortType "0"
+         AllowCRLF "0"
+         LevelNo "0"
+         Occurs "0"
+         PadNulls "5"
+         SignOption "0"
+         SortingOrder "0"
+         ArrayHandling "0"
+         SyncIndicator "0"
+         PadChar ""
+         ExtendedPrecision "0"
+         TaggedSubrec "0"
+         OccursVarying "0"
+         PKeyIsCaseless "0"
+         SCDPurpose "0"
+      END DSSUBRECORD
+      Waitforwriter "0"
+      PadChar "#"
+      LeftTextPos "170"
+      TopTextPos "120"
+      SuppressTruncWarn "0"
+   END DSRECORD
+   BEGIN DSRECORD
+      Identifier "V0S46"
+      OLEType "CTransformerStage"
+      Readonly "0"
+      Name "t1xfmMapping"
+      NextID "3"
+      InputPins "V0S46P1"
+      OutputPins "V0S46P2"
+      ValidationStatus "0"
+      StageType "CTransformerStage"
+      BlockSize "0"
+      StageVarsMinimised "0"
+      LoopVarsMaximised "0"
+      MaxLoopIterations "0"
+   END DSRECORD
+   BEGIN DSRECORD
+      Identifier "V0S46P1"
+      OLEType "CTrxInput"
+      Readonly "0"
+      Name "inTempFile"
+      Partner "V0S45|V0S45P1"
+      LinkType "1"
+      MultiRow "0"
+      LinkMinimised "0"
+   END DSRECORD
+   BEGIN DSRECORD
+      Identifier "V0S46P2"
+      OLEType "CTrxOutput"
+      Readonly "0"
+      Name "outJobParam"
+      Partner "V0S39|V0S39P1"
+      Reject "0"
+      ErrorPin "0"
+      RowLimit "0"
+      Columns "COutputColumn"
+      BEGIN DSSUBRECORD
+         Name "OUTPUT1"
+         SqlType "2"
+         Precision "2048"
+         Scale "0"
+         Nullable "1"
+         KeyPosition "0"
+         DisplaySize "2048"
+         Derivation "inTempFile.TEXT"
+         Group "0"
+         ParsedDerivation "inTempFile.TEXT"
+         SourceColumn "inTempFile.TEXT"
+         SortKey "0"
+         SortType "0"
+         AllowCRLF "0"
+         LevelNo "0"
+         Occurs "0"
+         PadNulls "0"
+         SignOption "0"
+         SortingOrder "0"
+         ArrayHandling "0"
+         SyncIndicator "0"
+         PadChar ""
+         ExtendedPrecision "0"
+         TaggedSubrec "0"
+         OccursVarying "0"
+         PKeyIsCaseless "0"
+         SCDPurpose "0"
+      END DSSUBRECORD
+      LeftTextPos "307"
+      TopTextPos "120"
+      LinkMinimised "0"
+   END DSRECORD
+END DSJOB
+BEGIN DSEXECJOB
+   Identifier "lodcpyCapManAdjTempToJobParamM"
+   DateModified "1899-12-30"
+   TimeModified "00.00.01"
+   BEGIN DSRECORD
+      Identifier "lodcpyCapManAdjTempToJobParamM"
+      F1 "JOB"
+      F3 "11.7///60/C"
+      F4 "lodcpyCapManAdjTempToJobParamM.t1xfmMapping"
+      F5 "jobParamFile\VCNum\VPar1\VtmpDir"
+      F6 "jobParamFile\VCNum\VBus Type\VtmpDir"
+      F7 "/etldata/cms01/common/ctl/JParamCMA33SH.txt\V33\VSH\V/etldata/cms01/isdata/istmp"
+      F9 "0\V0\V0\V0"
+      F10 "V0"
+      F12 "* VC LOGS *\(D)\(A)^1_1 10/27/2005 14:03:05 210349 PROMOTE dsprod CMS dsadm Cap move from DSDEV CMS_CAP_STAGE to DSPROD CMS of Jobs/Capitation/Manual Adjustments and Routines/CMS/CapManulAdj per CM1333469 and NORA 9273 per John Lew.\(D)\(A)^1_1 10/27/2005 13:47:43 210348 INIT dsdev CMS_CAP_STAGE dsadm Cap move from DSDEV CMS_CAP_STAGE to DSPROD CMS of Jobs/Capitation/Manual Adjustments and Routines/CMS/CapManulAdj per CM1333469 and NORA 9273 per John Lew.\(D)\(A)^1_2 01/09/2010 13:49:39 cms migration etlp8005 cms1 rselvar Included the changes for CMS Migration project.\(D)\(A)"
+      F18 "/etldata/cms01/common/ctl/JParamCMA33SH.txt\V33\VSH\V/etldata/cms01/isdata/istmp"
+      F21 "1\V1\V1\V1"
+      F24 ",,,,"
+      F28 "\\Jobs\\Capitation\\ManualAdjustments"
+      F29 "0"
+      F30 "1"
+      F31 "2025-07-24 08:36:52"
+      F32 "0"
+      F34 "\V\VLINUX\V0\V\V\V\V\V\V\V\V\V\V0"
+      F36 "rn000171874"
+      F37 "CMS01_DEV"
+      F38 "0"
+      F39 "lodcpyCapManAdjTempToJobParamM.sffJobParamFile\VlodcpyCapManAdjTempToJobParamM.sffTempFile"
+      F41 "0"
+   END DSRECORD
+   BEGIN DSRECORD
+      Identifier "lodcpyCapManAdjTempToJobParamM.sffJobParamFile"
+      F1 "STAGE"
+      F2 "SEQ"
+      F3 "11.7///60/C"
+      F8 "0"
+      F9 "1"
+      F10 "1"
+      F11 "0"
+      F15 "V0S39"
+      F16 "CSeqFileStage"
+      F31 "lodcpyCapManAdjTempToJobParamM.sffJobParamFile"
+      F32 "-1.-1"
+   END DSRECORD
+   BEGIN DSRECORD
+      Identifier "lodcpyCapManAdjTempToJobParamM.sffJobParamFile.outJobParam"
+      F1 "INPIN"
+      F2 "SEQ"
+      F3 "11.7///60/C"
+      F4 "WRITE"
+      F5 "1"
+      F6 "1"
+      F7 "0"
+      F10 "\(A)"
+      F11 ","
+      F13 "\""
+      F14 "0"
+      F16 "lodcpyCapManAdjTempToJobParamM.sffJobParamFile"
+      F17 "DSD.SEQOpen"
+      F19 "$DS.SEQPUT"
+      F20 "DSD.SEQClose"
+      F21 "OUTPUT1"
+      F22 "0"
+      F23 "99"
+      F25 "2"
+      F26 "2048"
+      F27 "0"
+      F28 "2048"
+      F32 "J\\390\\V0S46P2\VJ\\390\\V0S39P1"
+      F33 "#jobParamFile#"
+      F34 "2"
+      F35 "0"
+      F36 "0"
+      F37 "0"
+      F38 "NONE"
+      F39 "outJobParam"
+      F40 "1"
+      F43 "0"
+      F44 "0"
+      F47 "2"
+      F54 "0"
+      F55 "0"
+      F56 "0"
+      F57 "0"
+      F59 "#"
+      F60 "0"
+      F61 "0"
+      F64 "0"
+      F67 "0"
+      F70 "0"
+      F71 "0"
+      F77 "outJobParam"
+   END DSRECORD
+   BEGIN DSRECORD
+      Identifier "lodcpyCapManAdjTempToJobParamM.sffTempFile"
+      F1 "STAGE"
+      F2 "SEQ"
+      F3 "11.7///60/C"
+      F8 "0"
+      F9 "1"
+      F10 "1"
+      F11 "0"
+      F15 "V0S45"
+      F16 "CSeqFileStage"
+      F31 "lodcpyCapManAdjTempToJobParamM.sffTempFile"
+      F32 "-1.-1"
+   END DSRECORD
+   BEGIN DSRECORD
+      Identifier "lodcpyCapManAdjTempToJobParamM.sffTempFile.inTempFile"
+      F1 "OUTPIN"
+      F2 "SEQ"
+      F3 "11.7///60/C"
+      F4 "READ"
+      F5 "1"
+      F6 "1"
+      F10 "\(A)"
+      F13 "\""
+      F14 "1"
+      F16 "lodcpyCapManAdjTempToJobParamM.sffTempFile"
+      F17 "DSD.SEQOpen"
+      F18 "$DS.SEQGETNEXT"
+      F20 "DSD.SEQClose"
+      F21 "TEXT"
+      F22 "0"
+      F23 "99"
+      F25 "12"
+      F26 "2048"
+      F27 "0"
+      F28 "2048"
+      F32 "J\\390\\V0S45P1\VJ\\390\\V0S46P1"
+      F33 "#tmpDir#/cap_manual_adj_job_param_temp_#CNum##Par1#.txt"
+      F35 "0"
+      F39 "inTempFile"
+      F40 "0"
+      F43 "0"
+      F44 "0"
+      F47 "1"
+      F54 "0"
+      F55 "0"
+      F56 "0"
+      F57 "0"
+      F59 "#"
+      F60 "0"
+      F61 "5"
+      F62 "0"
+      F64 "0"
+      F67 "0"
+      F70 "0"
+      F71 "0"
+      F77 "inTempFile"
+   END DSRECORD
+   BEGIN DSRECORD
+      Identifier "lodcpyCapManAdjTempToJobParamM.t1xfmMapping"
+      F1 "STAGE"
+      F2 "TRX"
+      F3 "11.7///60/C"
+      F4 "lodcpyCapManAdjTempToJobParamM"
+      F5 "DSD.StageRun"
+      F7 "JOB.650908947.DT.2087158583.TRANS1"
+      F9 "lodcpyCapManAdjTempToJobParamM.sffTempFile.inTempFile"
+      F10 "lodcpyCapManAdjTempToJobParamM.sffJobParamFile.outJobParam"
+      F12 "lodcpyCapManAdjTempToJobParamM.sffJobParamFile.outJobParam"
+      F15 "V0S46"
+      F16 "CTransformerStage"
+      F27 "0"
+      F31 "lodcpyCapManAdjTempToJobParamM.t1xfmMapping"
+      F32 "-1.-1"
+   END DSRECORD
+   BEGIN DSBPSOURCE
+      Identifier "JOB.650908947.DT.2087158583.TRANS1"
+      TERMINATOR =+=+=+=
+* Tokens were replaced below as follows:
+* JobParam%%1 <= jobParamFile
+* JobParam%%2 <= CNum
+* JobParam%%3 <= Par1
+* JobParam%%4 <= tmpDir
+* Pin%%V0S46P1.Column%%1 <= inTempFile.TEXT
+* GET.Pin%%V0S46P1 <= GET.inTempFile
+* Pin%%V0S46P1.REJECTEDCODE <= inTempFile.REJECTEDCODE
+* Pin%%V0S46P2.Column%%1 <= outJobParam.OUTPUT1
+* PUT.Pin%%V0S46P2 <= PUT.outJobParam
+* Pin%%V0S46P2.REJECTED <= outJobParam.REJECTED
+* Pin%%V0S46P2.REJECTEDCODE <= outJobParam.REJECTEDCODE
+*
+* Subroutine for active stage lodcpyCapManAdjTempToJobParamM.t1xfmMapping generated at 08:36:52 24 JUL 2025
+*
+SUBROUTINE DSTransformerStage(HANDLES,ERROR)
+
+$INCLUDE DSINCLUDE DSD_RTCONFIG.H
+$INCLUDE DSINCLUDE DSD_STAGE.H
+$INCLUDE DSINCLUDE DSD_BCI.H
+
+$DEFINE JobParam%%1 STAGECOM.JOB.STATUS<7,1>
+$DEFINE JobParam%%2 STAGECOM.JOB.STATUS<7,2>
+$DEFINE JobParam%%3 STAGECOM.JOB.STATUS<7,3>
+$DEFINE JobParam%%4 STAGECOM.JOB.STATUS<7,4>
+
+$INCLUDE DSINCLUDE JOBCONTROL.H
+DEFFUN DSRLoadString(Num,Text,Args) CALLING '*DataStage*DSR_LOADSTRING'
+$DEFINE Pin%%V0S46P1.Column%%1 STAGECOM.ARR(1)
+$DEFINE GET.Pin%%V0S46P1 CALL $DS.SEQGETNEXT(1,Pin%%V0S46P1.REJECTEDCODE)
+IF STAGECOM.TRACE.STATS THEN CALL $PERF.NAME(-2,'outJobParam.Derivation')
+$DEFINE Pin%%V0S46P2.Column%%1 STAGECOM.ARR(1)
+$DEFINE PUT.Pin%%V0S46P2 CALL $DS.SEQPUT(2, Pin%%V0S46P2.REJECTEDCODE)
+
+UPDATE.COUNT = STAGECOM.RATE
+
+
+
+LOOP
+	REJECTED = @TRUE
+	* Get next row from primary input pin inTempFile
+	STAGECOM.PINNO = 1
+	GET.Pin%%V0S46P1
+	ERROR = Pin%%V0S46P1.REJECTEDCODE
+WHILE NOT(ERROR)
+
+	STAGECOM.PINNO = 2
+	    IF STAGECOM.TRACE.STATS THEN CALL $PERF.BEGIN(-2)
+	    IF @TRUE THEN
+		* Column derivation code for pin outJobParam
+		Pin%%V0S46P2.REJECTED = @FALSE
+	    IF STAGECOM.TRACE.STATS THEN CALL $PERF.END(-2)
+
+		PUT.Pin%%V0S46P2
+		IF NOT(Pin%%V0S46P2.REJECTEDCODE) THEN
+		    REJECTED = @FALSE
+		END ELSE 
+		    Pin%%V0S46P2.REJECTED = @TRUE
+		END 
+	    END
+	    ELSE
+		Pin%%V0S46P2.REJECTED = @TRUE
+		Pin%%V0S46P2.REJECTEDCODE = 0
+	    END
+
+
+  UPDATE.COUNT -= 1
+  IF UPDATE.COUNT LE 0 THEN CALL DSD.Update(HANDLES);UPDATE.COUNT = STAGECOM.RATE
+REPEAT
+RETURN
+END
+
+=+=+=+=
+   END DSBPSOURCE
+   BEGIN DSBPBINARY
+      Identifier "JOB.650908947.DT.2087158583.TRANS1"
+      B1 "E1DA10B7050001003E00020000000200120024007A00650053001200FFFFFFFFE401000048000000"
+      B41 "2400000073000000E6B30000380200004802000031030000990A0000E10A00000000000000000000"
+      B81 "08000000580042005300540058004300530054005800440055005400580045005300540058004600"
+      B121 "53005400580047005300540002015300560057005800480057005400580049005300540058004A00"
+      B161 "5300540058004B005300540058004C005300540058004D005300540058004E005300540058004F00"
+      B201 "55005400580050005500540058005100530054005800520053005400100041005800570006015700"
+      B241 "59005A00DE025A00BE000000F8005C003400F8005D0035001E005B00020034003500E60043005900"
+      B281 "54003600F80054003700FC005400590054004200F800540038001E005E00020038003900F8003900"
+      B321 "40000C010E0140005A00DE025A000000E0010000FC0056005900540042001000410058005A000601"
+      B361 "5A0059005F00DE025F00000032010000F8005C003A001E00600001003A00DE0254000000A0010000"
+      B401 "F80059003B001000410058005F0006015F0059006100DE02610000006A010000F8005C003C001E00"
+      B441 "620001003C00F80056003D001E00630002003D003E000E013E006100DE02610094010000F8005900"
+      B481 "3700C2009A010000F80054003B00C200AC010000F80054003B00F80059003E009401360054003600"
+      B521 "CE00360059006100DE026100D60100001E00640001003F00E60043005900540036000C01C2000000"
+      B561 "C80000005C015C0101000000140000001200000013000000005354414745434F4D00FA01FC02FF01"
+      B601 "FB00424349434F4D00FD0EFE0024504552462E4E414D456F75744A6F62506172616D2E4465726976"
+      B641 "6174696F6E2444532E5345514745544E45585424504552462E424547494E24504552462E454E4424"
+      B681 "44532E5345515055544453442E557064617465030004000003010000000300200000030200000005"
+      B721 "00000000031000000003000000000501000000040A0000001D00000003FEFFFFFF01160000002700"
+      B761 "0000040E0000003D0000000502000000040B0000004B000000050300000004090000005600000004"
+      B801 "0A0000005F000000040A000000690000000000000000000000000000000800000001000100000000"
+      B841 "000F0000000200010000000000190000000300010000000000240000000400010000000000300000"
+      B881 "0005000100000000003500000006000100000000003A000000070001000000000045000000080001"
+      B921 "0000000000490000000900010000000000510000000A00010000000000590000000B000100000000"
+      B961 "00610000000C000100000000006B0000000D00010000000000740000000E000100000000007E0000"
+      B1001 "000F000100000000008700000010000100000000008F000000110001000000000099000000120001"
+      B1041 "0000000000A90000001300010000000000B30000001400010000000000BD00000015000100000000"
+      B1081 "00C50000001600010000000000CF0000001700010000000000D90000001800010000000000E10000"
+      B1121 "001900010000000000EE0000001A00010000000000FB0000001B00010000000000050100001C0001"
+      B1161 "0000000000110100001D000100000000001F0100001E000100000000002B0100001F000100000000"
+      B1201 "003301000020000100000000003B01000021000100000000004601000022000100000000004C0100"
+      B1241 "0023000100000000005601000024000100000000006101000025000100000000006B010000260001"
+      B1281 "00000000007601000027000100000000007F01000028000100000000008401000029000100000000"
+      B1321 "008E0100002A00010000000000940100002B00010000000000A10100002C00010000000000A80100"
+      B1361 "002D00010000000000B00100002E00010000000000B90100002F00010000000000C1010000300001"
+      B1401 "0000000000C90100003100010000000000CD0100003200010000000000D201000033000100000000"
+      B1441 "00D70100003400010000000000DF0100003500010000000000E70100003600010000000000F40100"
+      B1481 "003700010000000000FD01000038000100000000000502000039000100000000001F0200003A0001"
+      B1521 "0000000000270200003B000100000000003D0200003C00010000000000450200003D000100000000"
+      B1561 "004D0200003E00010000000000670200003F000400000000006F0200004000040000000000750200"
+      B1601 "004100020000000000880200004200070000000000950200004300070000000000A7020000440007"
+      B1641 "0000000000B40200004500070000000000BF0200004600070000000000CB02000047000700000000"
+      B1681 "00DC0200004800070000000000E90200004900070000000000F70200004A00070000000000050300"
+      B1721 "004B00070000000000140300004C00070000000000240300004D00070000000000340300004E0007"
+      B1761 "0000000000470300004F000700000000005203000050000700000000006103000051000700000000"
+      B1801 "00700300005200070000000000244D41545249580048414E444C450050524F502E4E414D45005041"
+      B1841 "52414D2E4E414D45004F424A4543542E4E414D45004844424300494E464F0053544147452E4E414D"
+      B1881 "45004B4559004A6F624E616D65004572724D6F64650052746E4E616D65004A6F6248616E646C6500"
+      B1921 "496E666F547970650053746167654E616D65004C696E6B4E616D65004576656E7449640052756E4E"
+      B1961 "756D626572004576656E745479706546696C746572004576656E745479706500537461727454696D"
+      B2001 "6500456E6454696D65004D61784E756D62657200506172616D4E616D65005661724E616D65004375"
+      B2041 "7374496E666F4E616D65004576656E744D657373616765004D7367537472696E67005265706F7274"
+      B2081 "4C6576656C004C696E65536570617261746F72004D736754656D706C617465004172674C69737400"
+      B2121 "52756E4D6F646500506172616D65746572730056616C7565004C696D697454797065004C696D6974"
+      B2161 "56616C75650051756575654E616D6500506172616D56616C75650056617256616C756500436F6465"
+      B2201 "004572726F72436F6465004A6F6249440054726163654F7074696F6E7300706F72744E6F0054696D"
+      B2241 "656F757400537562724E616D650053756272417267004F7074696F6E73004E756D00546578740041"
+      B2281 "726773005F543030303030005F543030303031005550444154452E434F554E540052454A45435445"
+      B2321 "44005F5430303030320050696E2525563053343650312E52454A4543544544434F4445005F543030"
+      B2361 "3030330050696E2525563053343650322E52454A4543544544005F543030303034005F5430303030"
+      B2401 "350050696E2525563053343650322E52454A4543544544434F44450048414E444C4553004552524F"
+      B2441 "52005354414745434F4D2E54524143454D4F4445005354414745434F4D2E50494E00535441474543"
+      B2481 "4F4D2E4E554D2E524F5753005354414745434F4D2E41525200424349434F4D2E44534E0042434943"
+      B2521 "4F4D2E4844424300424349434F4D2E4E554D2E53544D545300424349434F4D2E4853544D54004243"
+      B2561 "49434F4D2E5458524F575300424349434F4D2E545853495A4500424349434F4D2E50524956415445"
+      B2601 "00424349434F4D2E4152522E524F575300424349434F4D2E4152522E53495A4500424349434F4D2E"
+      B2641 "4E4C532E4D41504E414D4500424349434F4D2E41525200424349434F4D2E4D41502E415252004243"
+      B2681 "49434F4D2E5458535441544500424349434F4D2E444F2E52455052455041524500EDFF00001800F5"
+      B2721 "FF7800FCFF2E00FBFF0A00FEFF06000A0010000600FEFF12000A002800FEFF0A000600FEFF280010"
+      B2761 "000E00FEFF0C00FCFF0C000600FCFF0600080022000A0002002F65746C646174612F636D7330312F"
+      B2801 "434D5330315F4445562F52545F42503339302F4A4F422E3635303930383934372E44542E32303837"
+      B2841 "3135383538332E5452414E53310000"
+   END DSBPBINARY
+END DSEXECJOB
